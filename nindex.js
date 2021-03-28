@@ -39,9 +39,18 @@ laudio.play();
 
 document.addEventListener("keydown", function(e) {
     makesound(e.key);
+    animate(e.key)
 })
 document.querySelectorAll(".drum").forEach(key => {
     key.addEventListener("click", (e)=>{
         makesound(e.explicitOriginalTarget.innerText)
+        animate(e.explicitOriginalTarget.innerText)
     })
 })
+function animate(key) {
+    let activebutton = "." + key
+    document.querySelector(activebutton).addClass("pressed")
+    setTimeout(()=> {
+        document.querySelector(activebutton).removeClass("pressed")
+    }, 100)
+}
