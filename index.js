@@ -8,17 +8,16 @@
 //the above function using jQery:
 $("button").click(function (e) {
     var drumletter = $("button").html();
-
     makesound(drumletter);
     animation(drumletter);
 
 });
-// document.addEventListener("keydown", function funn(event) {
-//     var keyy = event.key;
-//     makesound(keyy);
-//     animation (keyy);
+document.addEventListener("keydown", function funn(event) {
+    var keyy = event.key;
+    makesound(keyy);
+    animation (keyy);
 
-// })
+})
 $(document).keydown(function (e) {
     var keyy = e.key;
 
@@ -57,11 +56,6 @@ function makesound(press) {
             break;
         default:
             ;
-
-
-
-
-
     }
 }
 function animation(pressed) {
